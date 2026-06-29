@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>NOSHERWANAQEEL</title>
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+ .profile{
+
+    position:relative;
+
+    width:140px;
+
+    height:140px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    padding:6px;
+
+    background:linear-gradient(
+    45deg,
+    #00e5ff,
+    #7c3aed,
+    #ff00cc,
+    #00e5ff
+    );
+
+    background-size:400%;
+
+    animation:ring 6s linear infinite;
+
+}
+
+@keyframes ring{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:400%;
+}
+
+}
+
+.profile img{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #111827;
+
+}
+
+.online{
+
+    position:absolute;
+
+    right:12px;
+
+    bottom:12px;
+
+    width:22px;
+
+    height:22px;
+
+    background:#00ff6a;
+
+    border-radius:50%;
+
+    border:3px solid white;
+
+    box-shadow:0 0 20px #00ff6a;
+
+}
+
+h1{
+
+    color:white;
+
+    margin-top:22px;
+
+    text-align:center;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+h1 i{
+
+    color:#00d4ff;
+
+    margin-left:8px;
+
+    font-size:22px;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#d6d6d6;
+
+    margin-top:10px;
+
+    margin-bottom:35px;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+}   
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#050816,#0b1d51,#4b1d95,#0f172a);
+    background-size:400% 400%;
+    animation:aurora 15s ease infinite;
+}
+
+@keyframes aurora{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:#7c3aed;
+    filter:blur(170px);
+    top:-250px;
+    left:-250px;
+    opacity:.45;
+    animation:blob1 12s infinite alternate;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:#2563eb;
+    filter:blur(170px);
+    bottom:-250px;
+    right:-250px;
+    opacity:.45;
+    animation:blob2 12s infinite alternate;
+}
+
+@keyframes blob1{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(150px,100px);
+    }
+
+}
+
+@keyframes blob2{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(-150px,-100px);
+    }
+
+}
+
+.card{
+
+    position:relative;
+
+    width:390px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.35),
+
+    inset 0 0 20px rgba(255,255,255,.05);
+
+    animation:cardFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes cardFloat{
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+.social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.social a{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    transition:.45s;
+
+}
+
+.social a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.social a:hover::before{
+
+    left:120%;
+
+}
+
+.social a:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+    box-shadow:
+
+    0 0 25px rgba(0,229,255,.45),
+
+    0 0 60px rgba(124,58,237,.35);
+
+}
+
+.social a i{
+
+    font-size:28px;
+
+    width:35px;
+
+    transition:.45s;
+
+}
+
+.social a:hover i{
+
+    transform:rotate(360deg) scale(1.25);
+
+}
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#050816;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+transition:1s;
+
+}
+
+.loader-circle{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+border:6px solid rgba(255,255,255,.15);
+
+border-top:6px solid cyan;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+#loader h2{
+
+color:white;
+
+margin-top:25px;
+
+font-weight:600;
+
+letter-spacing:3px;
+
+}
+
+.cursor-glow{
+
+position:fixed;
+
+width:250px;
+
+height:250px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:radial-gradient(circle,
+rgba(0,229,255,.28),
+transparent 70%);
+
+transform:translate(-50%,-50%);
+
+filter:blur(30px);
+
+z-index:-1;
+
+}
+
+footer{
+
+margin-top:30px;
+
+text-align:center;
+
+color:white;
+
+font-size:14px;
+
+opacity:.7;
+
+}
+
+footer strong{
+
+color:#00e5ff;
+
+}
+#themeToggle{
+    position:fixed;
+    top:25px;
+    right:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    color:white;
+    cursor:pointer;
+    font-size:22px;
+    transition:.4s;
+    z-index:999;
+}
+
+#themeToggle:hover{
+    transform:rotate(180deg) scale(1.1);
+    box-shadow:0 0 25px cyan;
+}
+
+.light-mode{
+    background:#eef3ff !important;
+}
+
+.light-mode .card{
+    background:rgba(255,255,255,.85);
+    color:#111;
+}
+
+.light-mode h1,
+.light-mode p,
+.light-mode footer{
+    color:#111;
+}
+
+#particles{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-2;
+}
+
+.particle{
+    position:absolute;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:white;
+    opacity:.6;
+    animation:floatParticle linear infinite;
+}
+
+@keyframes floatParticle{
+
+from{
+transform:translateY(100vh);
+}
+
+to{
+transform:translateY(-100vh);
+}
+
+}
+</style>
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+ <div class="cursor-glow"></div>
+
+<div class="card">   
+<div class="card">
+
+<div class="profile">
+
+<img src="D:\picher's\media\IMG-20260528-WA0004.jpg" alt="NOSHERWANAQEEL">
+
+<div class="online"></div>
+
+</div>
+</div>
+<div class="cursor-glow"></div>
+
+<button id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
+<div id="particles"></div>
+<footer>
+
+Designed by
+
+<strong>NOSHERWANAQEEL</strong>
+
+</footer>
+<h1>
+NOSHERWANAQEEL
+<i class="fa-solid fa-circle-check"></i>
+</h1>
+
+<p>
+PROCESS
+</p>
+
+</div>
+</div>
+</p>
+
+<div class="social">
+
+<a href="https://youtube.com/@nosherwanaqeel_014" target="_blank">
+<i class="fab fa-youtube"></i>
+YouTube
+</a>
+
+<a href="https://instagram.com/nosherwanaqeel" target="_blank">
+<i class="fab fa-instagram"></i>
+Instagram
+</a>
+
+<a href="https://tiktok.com/@nosherwanaqeel0" target="_blank">
+<i class="fab fa-tiktok"></i>
+TikTok
+</a>
+
+<a href="https://x.com/nosherwanaqeel0" target="_blank">
+<i class="fab fa-x-twitter"></i>
+X (Twitter)
+</a>
+
+<a href="https://snapchat.com/add/nosherwan.aqeel" target="_blank">
+<i class="fab fa-snapchat"></i>
+Snapchat
+</a>
+
+<a href="https://facebook.com/nosherwanaqeel" target="_blank">
+<i class="fab fa-facebook"></i>
+Facebook
+</a>
+
+<a href="https://wa.me/923138300488" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+<a href="mailto:nosherwanaqeel014@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+Email
+</a>
+
+</div>
+
+</div>
+<script>
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#050816;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+transition:1s;
+
+}
+
+.loader-circle{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+border:6px solid rgba(255,255,255,.15);
+
+border-top:6px solid cyan;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+#loader h2{
+
+color:white;
+
+margin-top:25px;
+
+font-weight:600;
+
+letter-spacing:3px;
+
+}
+
+.cursor-glow{
+
+position:fixed;
+
+width:250px;
+
+height:250px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:radial-gradient(circle,
+rgba(0,229,255,.28),
+transparent 70%);
+
+transform:translate(-50%,-50%);
+
+filter:blur(30px);
+
+z-index:-1;
+
+}
+
+footer{
+
+margin-top:30px;
+
+text-align:center;
+
+color:white;
+
+font-size:14px;
+
+opacity:.7;
+
+}
+
+footer strong{
+
+color:#00e5ff;
+
+} 
+<script>
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},1200);
+
+});
+
+const glow=document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+document.getElementById("themeToggle").onclick=()=>{
+
+document.body.classList.toggle("light-mode");
+
+};
+
+const particles=document.getElementById("particles");
+
+for(let i=0;i<80;i++){
+
+let p=document.createElement("div");
+
+p.className="particle";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=(6+Math.random()*10)+"s";
+
+p.style.animationDelay=Math.random()*5+"s";
+
+particles.appendChild(p);
+
+}
+
+document.querySelectorAll(".social a").forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+let ripple=document.createElement("span");
+
+ripple.style.position="absolute";
+
+ripple.style.left=e.offsetX+"px";
+
+ripple.style.top=e.offsetY+"px";
+
+ripple.style.width="20px";
+
+ripple.style.height="20px";
+
+ripple.style.background="white";
+
+ripple.style.opacity=".5";
+
+ripple.style.borderRadius="50%";
+
+ripple.style.transform="translate(-50%,-50%) scale(0)";
+
+ripple.style.transition=".6s";
+
+this.appendChild(ripple);
+
+requestAnimationFrame(()=>{
+
+ripple.style.transform="translate(-50%,-50%) scale(18)";
+
+ripple.style.opacity="0";
+
+});
+
+setTimeout(()=>ripple.remove(),600);
+
+});
+
+});
+
+</script>   
+</script>
+
+</body>
+
+</html>
